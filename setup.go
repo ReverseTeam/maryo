@@ -316,8 +316,7 @@ func generateRomFSPatch(encryptionKeyPath string) {
 	// check the files exist
 	filesInDataDir := []bool {
 
-		doesFileExist("maryo-data/private-key.pem"),
-		doesFileExist("maryo-data/public-key.pem"),
+		doesFileExist("maryo-data/key.pem"),
 		doesFileExist("maryo-data/cert.pem"),
 
 	}
