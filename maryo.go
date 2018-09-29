@@ -91,7 +91,7 @@ func main() {
 
 			// check the pubkey
 			if doesFileExist("maryo-data/public-key.pem") != false {
-				
+
 				// check the privatekey
 				if doesFileExist("maryo-data/private-key.pem") != false {
 
