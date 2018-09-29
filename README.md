@@ -14,6 +14,6 @@ go to the releases, and download the correct binary for your system. just double
 
 ```
 $ go get github.com/ReverseTeam/maryo
-$ cd $GOPATH/src/github.com/ReverseTeam/maryo-reverse
+$ cd $GOPATH/src/github.com/ReverseTeam/maryo
 $ go build
 ```
