@@ -59,11 +59,11 @@ func doCertGen(config string) {
 
 	}
 
-	// key.pem
-	if doesFileExist("maryo-data/key.pem") {
+	// cert.key
+	if doesFileExist("maryo-data/cert.key") {
 
 		// delete the pubkey
-		deleteFile("maryo-data/key.pem")
+		deleteFile("maryo-data/cert.key")
 
 	}
 
@@ -170,7 +170,7 @@ func doCertGen(config string) {
 	fmt.Printf("certificate saved...\n")
 
 	// save private key
-	keyOut, err := os.OpenFile("maryo-data/key.pem", os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0600)
+	keyOut, err := os.OpenFile("maryo-data/cert.key", os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0600)
 	if err != nil {
 		fmt.Print("failed to open the keypair for writing...\n")
 
@@ -316,8 +316,8 @@ func generateRomFSPatch(encryptionKeyPath string) {
 	// check the files exist
 	filesInDataDir := []bool {
 
-		doesFileExist("maryo-data/key.pem"),
 		doesFileExist("maryo-data/cert.pem"),
+		doesFileExist("maryo-data/cert.key"),
 
 	}
 
